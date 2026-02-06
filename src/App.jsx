@@ -1,7 +1,11 @@
+import Header from "./components/Header/Header";
+import Tasks from "./components/Tasks/Tasks";
+
 function App() {
 	return (
 		<>
-			<div>Todo App developed by Victor Martins dos Reis</div>
+			<Header />
+         <Tasks />
 		</>
 	);
 }
