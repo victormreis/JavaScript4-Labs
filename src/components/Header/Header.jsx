@@ -1,8 +1,10 @@
+import "./Header.scss";
+
 function Header() {
 	return (
-		<header>
-			<div>Todo App</div>
-			<div>by Victor Martins dos Reis</div>
+		<header className="header">
+			<div className="title">Todo App</div>
+			<div className="author">by Victor Martins dos Reis</div>
 		</header>
 	);
 }
