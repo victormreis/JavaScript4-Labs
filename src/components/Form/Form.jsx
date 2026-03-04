@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Form.scss";
 
 function Form({ onAddTask }) {
 	const [description, setDescription] = useState("");
@@ -21,10 +22,10 @@ function Form({ onAddTask }) {
 	};
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<form className="form" onSubmit={handleSubmit}>
 			<h2>Add New Task</h2>
 
-			{error && <div style={{ color: "red" }}>{error}</div>}
+			{error && <div className="error">{error}</div>}
 
 			<div>
 				<label>Description:</label>

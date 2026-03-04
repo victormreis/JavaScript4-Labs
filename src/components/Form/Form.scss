@@ -1,0 +1,97 @@
+@use "../../styles/variables" as *;
+
+.form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: $radius;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  max-width: 500px;
+  margin: 0;
+  
+
+  h2 {
+    margin-bottom: 1.5rem;
+    color: $primary-color;
+    text-align: center;
+  }
+
+  .error {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    padding: 0.5rem;
+    border-radius: $radius;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    label {
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+      color: $text-color;
+    }
+
+    input,
+    select {
+      padding: 0.6rem;
+      border-radius: $radius;
+      border: 1px solid #d1d5db;
+      font-size: 0.95rem;
+      transition: 0.2s;
+
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+        box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    border-radius: $radius;
+    background-color: $primary-color;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.85;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  hr {
+    margin-top: 2rem;
+    border: none;
+    height: 1px;
+    background-color: #e5e7eb;
+  }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: $mobile) {
+  .form {
+    padding: 1.2rem;
+    margin-left: 4rem;
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    button {
+      padding: 0.6rem;
+    }
+  }
+}
