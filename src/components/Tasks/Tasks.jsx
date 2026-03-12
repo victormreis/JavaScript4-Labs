@@ -1,9 +1,10 @@
+import "./Tasks.scss";
 import Task from "../Task/Task";
 
 function Tasks({tasks, onClearTasks, onStatusChange, onTaskRemove}) {
 
   return (
-    <>
+    <div className="tasks-container">
       <h2>These are the tasks:</h2>
 
       {tasks.map((task) => (
@@ -15,9 +16,10 @@ function Tasks({tasks, onClearTasks, onStatusChange, onTaskRemove}) {
         />
       ))}
 
-      <hr />
-      <button onClick={onClearTasks}>Clear Tasks</button>
-    </>
+      <button className="clear-btn" onClick={onClearTasks}>
+        Clear Tasks
+      </button>
+    </div>
   );
 }
 
