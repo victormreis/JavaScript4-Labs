@@ -1,0 +1,78 @@
+@use "../../styles/variables" as *;
+
+.help-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+.help-page h1 {
+  margin-bottom: 1.5rem;
+}
+
+.help-page nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  margin-bottom: 1.5rem;
+}
+
+
+.help-page a {
+  text-decoration: none;
+  color: $primary-color;
+  font-weight: 500;
+  padding: 0.4rem 0.6rem;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+
+.help-page a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+.help-page .active {
+  background-color: $primary-color;
+  color: white;
+}
+
+
+.help-page hr {
+  margin-bottom: 1.5rem;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+
+.help-content {
+  line-height: 1.6;
+}
+
+.help-content h2 {
+  margin-bottom: 0.5rem;
+}
+
+.help-content p {
+  color: #555;
+}
+
+
+@media (max-width: $mobile) {
+  .help-page {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .help-page nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

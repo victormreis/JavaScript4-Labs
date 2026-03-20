@@ -1,19 +1,31 @@
 @use "../../styles/variables" as *;
 
 .header {
-  background: linear-gradient(135deg, $primary-color, #1e40af);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 2rem;
+  background-color: $primary-color; // usa seu variables
   color: white;
-  padding: 1.5rem;
-  text-align: center;
+}
 
-  .title {
-    font-size: 1.8rem;
-    font-weight: bold;
-  }
+.menu {
+  display: flex;
+  gap: 1.5rem;
+}
 
-  .author {
-    font-size: 0.9rem;
-    opacity: 0.85;
-    margin-top: 0.3rem;
-  }
+.menu .active {
+  border-bottom: 2px solid white;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  position: relative;
+}
+
+.menu a:hover {
+  opacity: 0.8;
 }
